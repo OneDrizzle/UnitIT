@@ -4,7 +4,12 @@ using System.Text;
 
 namespace UnitITICBM.Models
 {
-    class Enums
+    public enum Clearance
     {
+        low,
+        meduim,
+        high,
+        mega,
+        ultra,
     }
 }

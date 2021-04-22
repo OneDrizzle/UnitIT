@@ -4,7 +4,17 @@ using System.Text;
 
 namespace UnitITICBM.Models
 {
-    class Type
+    public class Type
     {
+
+        public int TypeID { get; private set; }
+        public string TypeName { get; private set; }
+
+        public Type(int typeID, string typeName)
+        {
+            
+
+        }
+
     }
 }

@@ -4,7 +4,17 @@ using System.Text;
 
 namespace UnitITICBM.Models
 {
-    class Employee
+    public class Employee
     {
+
+        public int EmployeeID { get; private set; }
+        public string EmpFirstName { get; private set; }
+        public string EmpLastName { get; private set; }
+        public Clearance EmpClearance { get; private set; }
+
+        public Employee(int employeeID, string empFirstName, string empLastName, Clearance empClearance)
+        {
+
+        }
     }
 }
