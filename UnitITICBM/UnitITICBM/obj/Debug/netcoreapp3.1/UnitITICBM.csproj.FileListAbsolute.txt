@@ -1,0 +1,4 @@
+C:\Users\Daniel\Documents\GitHub\UnitIT\UnitITICBM\UnitITICBM\bin\Debug\netcoreapp3.1\UnitITICBM.exe
+C:\Users\Daniel\Documents\GitHub\UnitIT\UnitITICBM\UnitITICBM\obj\Debug\netcoreapp3.1\UnitITICBM.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\UnitIT\UnitITICBM\UnitITICBM\obj\Debug\netcoreapp3.1\UnitITICBM.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\GitHub\UnitIT\UnitITICBM\UnitITICBM\obj\Debug\netcoreapp3.1\UnitITICBM.AssemblyInfo.cs
