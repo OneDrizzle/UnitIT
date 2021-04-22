@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {}
+    "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj": {}
   },
   "projects": {
-    "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
+    "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
-        "projectName": "UnitITICBM",
-        "projectPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
+        "projectUniqueName": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+        "projectName": "UnitITCMDB WPF",
+        "projectPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
         "packagesPath": "C:\\Users\\lopo\\.nuget\\packages\\",
-        "outputPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\obj\\",
+        "outputPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,12 +42,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -61,6 +55,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"

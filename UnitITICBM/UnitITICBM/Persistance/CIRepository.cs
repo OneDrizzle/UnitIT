@@ -25,7 +25,7 @@ namespace UnitITICBM.Persistance
 
                 //Saves data to table
                 SqlCommand cmd = new SqlCommand($"INSERT INTO {_tableName}(CI_ID) VALUES (@CI_ID)", conn);
-                cmd.Parameters.Add("@CaliperID", System.Data.SqlDbType.Int).Value = item.CI_ID;
+                cmd.Parameters.Add("@CI_ID", System.Data.SqlDbType.Int).Value = item.CI_ID;
 
                 cmd.ExecuteNonQuery();
             }
