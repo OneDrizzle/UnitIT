@@ -14,12 +14,14 @@ namespace UnitITICBM.Models
 
         public Attribute(int attributeID, string attributeName, string attributeValue)
         {
-
+            AttributeID = attributeID;
+            AttributeName = attributeName;
+            AttributeValue = attributeValue;
         }
 
         public void AssignTemplate(string templateName)
-        { 
-        
+        {
+            TemplateName = templateName;
         }
 
     }

@@ -12,7 +12,8 @@ namespace UnitITICBM.Models
 
         public Customer(int customerID, string customerName)
         {
-
+            CustomerID = customerID;
+            CustomerName = customerName;
         }
 
     }

@@ -14,7 +14,10 @@ namespace UnitITICBM.Models
 
         public Employee(int employeeID, string empFirstName, string empLastName, Clearance empClearance)
         {
-
+            EmployeeID = employeeID;
+            EmpFirstName = empFirstName;
+            EmpLastName = empLastName;
+            EmpClearance = empClearance;
         }
     }
 }

@@ -12,8 +12,8 @@ namespace UnitITICBM.Models
 
         public Type(int typeID, string typeName)
         {
-            
-
+            TypeID = typeID;
+            TypeName = typeName;
         }
 
     }
