@@ -6,15 +6,15 @@ namespace UnitITICBM.Models
     {
 
         public int CI_ID { get; private set; }
-        public Type type { get; private set; }
+        public Type @Type { get; private set; }
         public Customer Customer { get; private set; }
 
-        public List<Attribute> Attributes { get; private set; }
+        public List<CIAttributes> Attributes { get; private set; }
 
-        public CI(int cI_ID, Type type, Customer customer, List<Attribute> attributes)
+        public CI(int cI_ID, Type type, Customer customer, List<CIAttributes> attributes)
         {
             CI_ID = cI_ID;
-            this.type = type;
+            @Type = type;
             Customer = customer;
             Attributes = attributes;
         }

@@ -7,7 +7,7 @@ namespace UnitITICBM.Persistance
 {
     public interface IRepo<T>
     {
-        T GetAll(int id);
+        T Get(int id);
         List<T> GetAll();
         void Add(T item);
         bool Update(T fromItem, T toItem);

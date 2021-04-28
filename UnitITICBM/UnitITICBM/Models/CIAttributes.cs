@@ -4,15 +4,16 @@ using System.Text;
 
 namespace UnitITICBM.Models
 {
-    public class Attribute
+    public class CIAttributes
     {
 
         public int AttributeID { get; private set; }
         public string AttributeName { get; private set; }
         public string AttributeValue { get; private set; }
         public string TemplateName { get; private set; }
+        public string AttributeMappingID { get; private set; }
 
-        public Attribute(int attributeID, string attributeName, string attributeValue)
+        public CIAttributes(int attributeID, string attributeName, string attributeValue)
         {
             AttributeID = attributeID;
             AttributeName = attributeName;
@@ -23,6 +24,6 @@ namespace UnitITICBM.Models
         {
             TemplateName = templateName;
         }
-
+       
     }
 }

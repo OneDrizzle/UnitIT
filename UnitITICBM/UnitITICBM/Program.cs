@@ -1,4 +1,5 @@
 ﻿using System;
+using UnitITICBM.Persistance;
 
 namespace UnitITICBM
 {
@@ -6,7 +7,9 @@ namespace UnitITICBM
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AttributeRepositoryDB ardb = new AttributeRepositoryDB();
+            ardb.PrintList(ardb.GetAll());
+            Console.ReadLine();
         }
     }
 }
