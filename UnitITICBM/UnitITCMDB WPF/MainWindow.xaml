@@ -7,21 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="80,286,0,0" VerticalAlignment="Top" Height="28" Width="55"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="80,234,0,0" VerticalAlignment="Top" Height="28" Width="55"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="80,401,0,0" VerticalAlignment="Top" Height="28" Width="55"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="80,349,0,0" VerticalAlignment="Top" Height="28" Width="55"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="80,174,0,0" VerticalAlignment="Top" Height="28" Width="55"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="80,122,0,0" VerticalAlignment="Top" Height="28" Width="55"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="340,136,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="340,187,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,234,0,0" VerticalAlignment="Top" Width="115"/>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="420" Margin="515,91,0,0" VerticalAlignment="Top" Width="250">
-            <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="34,289,0,0" VerticalAlignment="Top" Width="185"/>
-        </Border>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="90" Margin="550,116,0,0" VerticalAlignment="Top" Width="185"/>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="107" Margin="550,244,0,0" VerticalAlignment="Top" Width="185"/>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="34" VerticalAlignment="Top" Width="800"/>
+        <Rectangle HorizontalAlignment="Center" Height="64" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="Black"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="660,11,0,0" VerticalAlignment="Top" Width="130" Source="/unit-it-logo_White_RGB.png"/>
+        <Button Content="Kunde" HorizontalAlignment="Left" Margin="80,104,0,0" VerticalAlignment="Top" Height="40" Width="120"/>
+
 
     </Grid>
 </Window>

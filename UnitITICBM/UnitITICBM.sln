@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitITICBM", "UnitITICBM\UnitITICBM.csproj", "{B12448D4-6DAB-4641-AB12-33C7E60E5C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitITCMDB WPF", "UnitITCMDB WPF\UnitITCMDB WPF.csproj", "{662B17DB-6A27-4A46-A939-F23427EBF8A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitITCMDB WPF", "UnitITCMDB WPF\UnitITCMDB WPF.csproj", "{662B17DB-6A27-4A46-A939-F23427EBF8A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Billeder", "Billeder", "{F72CD6B2-5652-4BBE-ABA3-735B58975EF7}"
+	ProjectSection(SolutionItems) = preProject
+		UnitITCMDB WPF\unit-it-logo_White_RGB.png = UnitITCMDB WPF\unit-it-logo_White_RGB.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
