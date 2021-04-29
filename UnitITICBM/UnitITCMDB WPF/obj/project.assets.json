@@ -8,33 +8,27 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\lopo\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
       "projectName": "UnitITCMDB WPF",
-      "projectPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
-      "packagesPath": "C:\\Users\\lopo\\.nuget\\packages\\",
-      "outputPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\obj\\",
+      "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lopo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://github.com/DSharpPlus/DSharpPlus": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {

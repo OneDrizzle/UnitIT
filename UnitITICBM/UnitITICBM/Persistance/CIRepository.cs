@@ -36,56 +36,63 @@ namespace UnitITICBM.Persistance
             throw new NotImplementedException();
         }
 
-        //public CI Get(int id)
-        //{
-        //    using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
-        //    {
-        //        conn.Open();
+        public CI Get(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+
+                // FINDS THE TYPE OF COMPONENT THROUGH CI ID AND CREATES TYPE OBJECT
+                string commandText = $"SELECT CITypes.TypeID, CITypes.TypeName FROM CIs INNER JOIN CITypes ON CIs.TypeID = CITypes.TypeID WHERE CIs.CI_ID = {id}";
+                SqlCommand cmd = new SqlCommand(commandText, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                Models.Type ciType = new Models.Type((int)reader[0], reader[1] as string ?? default); // ALLOWS TYPE NAME TO BE NULL ASWELL
+                reader.Close();
+
+                // REASSIGNS COMMANDTEXT TO FIND CUSTOMER THROUGH CI ID AND CREATES CUSTOMER OBJECT
+                commandText = $"SELECT Customers.CustomerID, Customers.CustomerName FROM Customers INNER JOIN CIs ON CIs.CustomerID = Customers.CustomerID WHERE CIs.CI_ID = {id}";
+                cmd = new SqlCommand(commandText, conn);
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                Models.Customer ciCustomer = new Customer((int)reader[0], reader[1] as string ?? default);
+                reader.Close();
+
+                // CREATING LIST OF ATTRIBUTES AND LOADING THEM IND LINE BY LINE
+                List<CIAttributes> tempList = new List<CIAttributes>();
+                commandText = $"SELECT Attributes.AttributeID, Attributes.AttributeName, CIAttributeMapping.AtrtibuteValue FROM CIs INNER JOIN CIAttributeMapping ON" +
+                    $" CIs.CI_ID = CIAttributeMapping.CI_ID INNER JOIN Attributes ON Attributes.AttributeID = CIAttributeMapping.AttributeID WHERE CIs.CI_ID = {id}";
+                cmd = new SqlCommand(commandText, conn);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    tempList.Add(new CIAttributes((int)reader[0], reader[1] as string ?? default, reader[2] as string ?? default));
+                }
+                reader.Close();
+
+                // THE WANTED CI IS CREATED AS AN OBJECT AND RETURNED
+                CI newCI = new CI(id, ciType, ciCustomer, tempList);
+                return newCI;
 
 
-        //        string commandText = $"SELECT * FROM CITypes WHERE TypeID = {id}";
-        //        SqlCommand CMDTypes = new SqlCommand(commandText, conn);
-        //        SqlDataReader readerType = CMDTypes.ExecuteReader();
+            }
+        }
 
-        //        Models.Type type = new Models.Type(readerType[0] as int? ?? default, readerType[1] as string);
+        
 
-
-        //        SqlCommand CMDCustomer = new SqlCommand($"SELECT * FROM Customers WHERE CustomerID = {id}", conn);
-        //        SqlDataReader readerCustomer = CMDCustomer.ExecuteReader();
-
-        //        Customer customer = new Customer((int)readerCustomer[0], (string)readerType[1]);
-
-        //        List<Models.CIAttributes> Testlist = new List<Models.CIAttributes>();
-
-        //        Models.CIAttributes a = new Models.CIAttributes();
-        //        Models.CIAttributes b = new Models.CIAttributes();
-        //        Models.CIAttributes c = new Models.CIAttributes();
-        //        Models.CIAttributes d = new Models.CIAttributes();
-        //        Testlist.Add(a);
-        //        Testlist.Add(b);
-        //        Testlist.Add(c);
-        //        Testlist.Add(d);
-
-        //        return new CI(id, type, customer, Testlist);
-
-
-        //    }
-        //}
 
         public List<CI> GetAll()
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {
-
                 List<CI> returnCI = new List<CI>();
                 int id = 1;
-                SqlCommand cmd = new SqlCommand("SELECT CI_ID FROM CIs");
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                for (int i = 0; i < 10; i++)
                 {
-                    
+                    Get(id);
                     id++;
                 }
+
                 return returnCI;
             }
         }
