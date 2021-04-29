@@ -9,7 +9,7 @@ namespace UnitITICBM.Models
         public Type @Type { get; private set; }
         public Customer Customer { get; private set; }
 
-        public List<CIAttributes> Attributes { get; private set; } = new List<CIAttributes>();
+        public List<CIAttributes> Attributes { get; private set; }
 
         public CI(int cI_ID, Type type, Customer customer, List<CIAttributes> attributes)
         {
@@ -32,6 +32,28 @@ namespace UnitITICBM.Models
             System.Console.WriteLine("Kunde " + Customer.CustomerName);
 
         }
+        public CI()
+        {
 
+        }
+
+        public void SetType(Type type)
+        {
+            this.Type = type;
+        }
+
+        public void SetCustomer(Customer customer)
+        {
+            Customer = customer;
+        }
+        public void SetID(int id)
+        {
+            CI_ID = id;
+        }
+
+        public void SetAttributes(List<CIAttributes> attributes)
+        {
+            Attributes = attributes;
+        }
     }
 }

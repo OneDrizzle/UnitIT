@@ -10,15 +10,17 @@ namespace UnitITICBM
         {
             CIRepository cRepo = new CIRepository();
 
-            Models.CI temp = cRepo.Get(3);
+            //Models.CI 
 
-            temp.PrintAttrbutes();
+            //Models.CI testCI = cRepo.GetFromCustomer(new Models.Customer(1, "Daniel"));
 
-            //List<Models.CI> tempo = cRepo.GetAll();
+            //testCI.PrintAttrbutes();
 
-            //tempo[0].PrintAttrbutes();
-            //tempo[1].PrintAttrbutes();
-            //tempo[2].PrintAttrbutes();
+            List<Models.CI> tempo = cRepo.GetAll();
+
+            tempo[0].PrintAttrbutes();
+            tempo[1].PrintAttrbutes();
+            tempo[2].PrintAttrbutes();
 
             Console.ReadLine();
 
