@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnitITICBM.Models;
 using UnitITICBM.Persistance;
 
 namespace UnitITICBM
@@ -8,19 +9,15 @@ namespace UnitITICBM
     {
         static void Main(string[] args)
         {
-            CIRepository cRepo = new CIRepository();
+            CIRepository cRepo = new CIRepository(new AttributeRepositoryDB(), new CustomerRepositoryDB(), new TypeRepositoryDB());
+            Customer c = cRepo.customers.Get(4);
 
-            //Models.CI 
+            List<CI> testCI = cRepo.GetAll(c);
 
-            //Models.CI testCI = cRepo.GetFromCustomer(new Models.Customer(1, "Daniel"));
-
-            //testCI.PrintAttrbutes();
-
-            List<Models.CI> tempo = cRepo.GetAll();
-
-            tempo[0].PrintAttrbutes();
-            tempo[1].PrintAttrbutes();
-            tempo[2].PrintAttrbutes();
+            foreach(CI x in testCI)
+            {
+                x.PrintAttrbutes();
+            }
 
             Console.ReadLine();
 

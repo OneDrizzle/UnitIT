@@ -21,14 +21,16 @@ namespace UnitITICBM.Models
 
         public void PrintAttrbutes()
         {
-            foreach(CIAttributes a in Attributes)
+            foreach (CIAttributes a in Attributes)
             {
                 System.Console.WriteLine(a.AttributeName);
                 System.Console.WriteLine(a.AttributeValue);
                 System.Console.WriteLine("");
             }
             System.Console.WriteLine("ID " + CI_ID);
+            System.Console.WriteLine("");
             System.Console.WriteLine("Komponent type " + @Type.TypeName);
+            System.Console.WriteLine("");
             System.Console.WriteLine("Kunde " + Customer.CustomerName);
 
         }
@@ -55,5 +57,7 @@ namespace UnitITICBM.Models
         {
             Attributes = attributes;
         }
+
+
     }
 }

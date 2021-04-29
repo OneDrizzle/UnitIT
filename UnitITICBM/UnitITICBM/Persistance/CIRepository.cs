@@ -8,26 +8,22 @@ namespace UnitITICBM.Persistance
 {
     public class CIRepository
     {
-        private List<CI> cIs;
+        public List<CI> cIs;
+        public AttributeRepositoryDB attributes;
+        public CustomerRepositoryDB customers;
+        public TypeRepositoryDB types;
 
-        public CIRepository()
+        public CIRepository(AttributeRepositoryDB attributesRepo, CustomerRepositoryDB customerRepo, TypeRepositoryDB typeRepo)
         {
             cIs = new List<CI>();
+            attributes = attributesRepo;
+            customers = customerRepo;
+            types = typeRepo;
         }
 
         public void Add(CI item)
         {
-            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
-            {
-                //Opens DB connection
-                conn.Open();
-
-                //Saves data to table
-                SqlCommand cmd = new SqlCommand($"INSERT INTO CIs (CI_ID) VALUES (@CI_ID)", conn);
-                cmd.Parameters.Add("@CI_ID", System.Data.SqlDbType.Int).Value = item.CI_ID;
-
-                cmd.ExecuteNonQuery();
-            }
+            
         }
 
         public void Delete(int id)
@@ -37,54 +33,7 @@ namespace UnitITICBM.Persistance
 
         public CI GetFromCI(int id)
         {
-            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
-            {
-                conn.Open();
-                CI newCI = new CI();
-                newCI.SetID(id);
-                // FINDS THE TYPE OF COMPONENT THROUGH CI ID AND CREATES TYPE OBJECT
-                string commandText = $"SELECT CITypes.TypeID, CITypes.TypeName FROM CIs INNER JOIN CITypes ON CIs.TypeID = CITypes.TypeID WHERE CIs.CI_ID = {id}";
-                SqlCommand cmd = new SqlCommand(commandText, conn);
-                SqlDataReader reader;
-                using (reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        newCI.SetType(new Models.Type((int)reader[0], reader[1] as string ?? default)); // ALLOWS TYPE NAME TO BE NULL ASWELL
-                    }
-                }
-
-                // REASSIGNS COMMANDTEXT TO FIND CUSTOMER THROUGH CI ID AND CREATES CUSTOMER OBJECT
-                commandText = $"SELECT Customers.CustomerID, Customers.CustomerName FROM Customers INNER JOIN CIs ON CIs.CustomerID = Customers.CustomerID WHERE CIs.CI_ID = {id}";
-                cmd = new SqlCommand(commandText, conn);
-                using (reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        newCI.SetCustomer(new Customer((int)reader[0], reader[1] as string ?? default));
-                    }
-                }
-                   
-
-                // CREATING LIST OF ATTRIBUTES AND LOADING THEM IND LINE BY LINE
-                List<CIAttributes> tempList = new List<CIAttributes>();
-                commandText = $"SELECT Attributes.AttributeID, Attributes.AttributeName, CIAttributeMapping.AtrtibuteValue FROM CIs INNER JOIN CIAttributeMapping ON" +
-                    $" CIs.CI_ID = CIAttributeMapping.CI_ID INNER JOIN Attributes ON Attributes.AttributeID = CIAttributeMapping.AttributeID WHERE CIs.CI_ID = {id}";
-                cmd = new SqlCommand(commandText, conn);
-                using (reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        tempList.Add(new CIAttributes((int)reader[0], reader[1] as string ?? default, reader[2] as string ?? default));
-                    }
-                }
-                newCI.SetAttributes(tempList);
-
-                return newCI;
-                
-
-
-            }
+            return new CI(id, types.Get(id), customers.Get(id), attributes.GetAll(id));
         }
 
         public CI GetFromCustomer(Customer customer)
@@ -92,55 +41,72 @@ namespace UnitITICBM.Persistance
             using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {
                 conn.Open();
-
-                // USING CUSTOMER ID TO FIND THE CONNECTED CI ID
-                string commandText = $"SELECT CIs.CI_ID FROM Cis INNER JOIN Customers ON Customers.CustomerID = CIs.CI_ID WHERE Customers.CustomerID = {customer.CustomerID}";
+                int ciID = 0;
+                string commandText = $"SELECT CIs.CI_ID FROM CIs INNER JOIN Customers ON Customers.CustomerID = CIs.CustomerID WHERE Customers.CustomerID = {customer.CustomerID}";
                 SqlCommand cmd = new SqlCommand(commandText, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Read();
-                int ciID = (int)reader[0];
-                reader.Close();
-
-                // USING CI ID TO FIND THE CI TYPE
-                commandText = $"SELECT CITypes.TypeID, CITypes.TypeName FROM CIs INNER JOIN CITypes ON CIs.TypeID = CITypes.TypeID WHERE CIs.CI_ID = {ciID}";
-                cmd = new SqlCommand(commandText, conn);
-                reader = cmd.ExecuteReader();
-                reader.Read();
-                Models.Type ciType = new Models.Type((int)reader[0], reader[1] as string ?? default);
-                reader.Close();
-
-                // CREATING LIST OF ATTRIBUTES FROM CI ID
-                List<CIAttributes> temp = new List<CIAttributes>();
-                commandText = $"SELECT Attributes.AttributeID, Attributes.AttributeName, CIAttributeMapping.AtrtibuteValue FROM CIs INNER JOIN CIAttributeMapping ON CIs.CI_ID = CIAttributeMapping.CI_ID " +
-                    $"INNER JOIN Attributes ON Attributes.AttributeID = CIAttributeMapping.AttributeID WHERE CIs.CI_ID = {ciID}";
-                cmd = new SqlCommand(commandText, conn);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
+                SqlDataReader reader;
+                using(reader = cmd.ExecuteReader())
                 {
-                    temp.Add(new CIAttributes((int)reader[0], reader[1] as string ?? default, reader[2] as string ?? default));
+                    while (reader.Read())
+                    {
+                        ciID = (int)reader[0];
+                    }
                 }
-
-                return new CI(ciID, ciType, customer, temp);
-
+                return GetFromCI(ciID);
             }
-
         }
 
         public List<CI> GetAll()
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {
-                List<CI> returnCI = new List<CI>();
-                int id = 1;
-                for (int i = 0; i < 10; i++)
+                conn.Open();
+                List<CI> CIsToFind = new List<CI>();
+                int ciCount = 0;
+                string commandText = $"SELECT COUNT(*) FROM CIs";
+                SqlCommand cmd = new SqlCommand(commandText, conn);
+                SqlDataReader reader;
+                using(reader = cmd.ExecuteReader())
                 {
-                    GetFromCI(id);
-                    id++;
-                  
+                    while (reader.Read())
+                    {
+                        ciCount = (int)reader[0];
+                    }
                 }
 
-                return returnCI;
+                for (int i = 1; i < ciCount+1; i++)
+                {
+                    CIsToFind.Add(GetFromCI(i));
+                }
+                return CIsToFind;
             }
+        }
+
+        public List<CI> GetAll(Customer customer)
+        {
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                List<int> clientCIs = new List<int>();
+                List<CI> listToFind = new List<CI>();
+                string commandText = $"SELECT CI_ID FROM CIs WHERE CustomerID = {customer.CustomerID}";
+                SqlCommand cmd = new SqlCommand(commandText, conn);
+                SqlDataReader reader;
+                using(reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        clientCIs.Add((int)reader[0]);
+                    }
+                }
+
+                for (int i = 0; i < clientCIs.Count; i++)
+                {
+                    listToFind.Add(GetFromCI(clientCIs[i]));
+                }
+                return listToFind;
+            }
+
         }
 
         public void Refresh()
