@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "1KGYlj8rrilBJTHYeD4T3gj5eZkM51RXIjtyRIa8mqEKIcXRkPBcOdzkDbRe+U4ABTy9rxovZ0aqeU/n43v45w==",
   "success": true,
   "projectFilePath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+=======
+  "dgSpecHash": "o4AZUdCXw6qsUGToKIsvFgeH+bb3RLa9UG8ujUU6rkRBa+olgZx0oIXVfMam6O2CxWZZvBc9tPg/UmsI4liaHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }

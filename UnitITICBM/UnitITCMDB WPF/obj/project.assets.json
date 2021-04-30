@@ -8,25 +8,42 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\lopo\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+=======
+    "C:\\Users\\baske\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
       "projectName": "UnitITCMDB WPF",
       "projectPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
       "packagesPath": "C:\\Users\\lopo\\.nuget\\packages\\",
       "outputPath": "D:\\Fucking GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+      "projectName": "UnitITCMDB WPF",
+      "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\UnitITCMDB WPF.csproj",
+      "packagesPath": "C:\\Users\\baske\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB WPF\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
+<<<<<<< Updated upstream
         "C:\\Users\\lopo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+=======
+        "C:\\Users\\baske\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> Stashed changes
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -38,6 +55,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -49,6 +67,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -67,7 +86,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

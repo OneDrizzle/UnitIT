@@ -7,10 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitITICBM", "UnitITICBM\Un
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitITCMDB WPF", "UnitITCMDB WPF\UnitITCMDB WPF.csproj", "{662B17DB-6A27-4A46-A939-F23427EBF8A0}"
 EndProject
+<<<<<<< Updated upstream
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Billeder", "Billeder", "{F72CD6B2-5652-4BBE-ABA3-735B58975EF7}"
 	ProjectSection(SolutionItems) = preProject
 		UnitITCMDB WPF\unit-it-logo_White_RGB.png = UnitITCMDB WPF\unit-it-logo_White_RGB.png
 	EndProjectSection
+=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitITCMDB_Test", "UnitITCMDB_Test\UnitITCMDB_Test.csproj", "{8900C717-35A9-4911-A5A4-0D036055C2C3}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

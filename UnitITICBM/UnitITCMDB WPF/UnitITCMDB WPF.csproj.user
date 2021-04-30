@@ -7,15 +7,37 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Update="KundeVindue.xaml.cs">
+=======
+    <Compile Update="MVVM\View\CustomerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\HomeView.xaml.cs">
+>>>>>>> Stashed changes
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Page Update="KundeVindue.xaml">
       <SubType>Designer</SubType>
     </Page>
+=======
+>>>>>>> Stashed changes
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\CustomerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\MenuButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\TextBoxTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
