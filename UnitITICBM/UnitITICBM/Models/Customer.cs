@@ -15,6 +15,19 @@ namespace UnitITICBM.Models
             CustomerID = customerID;
             CustomerName = customerName;
         }
+        public Customer()
+        {
 
+        }
+
+        public void SetID(int id)
+        {
+            CustomerID = id;
+        }
+
+        public void SetName(string name)
+        {
+            CustomerName = name;
+        }
     }
 }

@@ -30,9 +30,29 @@ namespace UnitITICBM.Persistance
             throw new NotImplementedException();
         }
 
-        public Attribute GetAll(int id)
+        public List<CIAttributes> GetAll(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+
+                List<CIAttributes> attributesToFind = new List<CIAttributes>();
+                string commmandText = $"SELECT Attributes.AttributeID, Attributes.AttributeName, CIAttributeMapping.AtrtibuteValue FROM CIs INNER JOIN CIAttributeMapping ON " +
+                    $"CIs.CI_ID = CIAttributeMapping.CI_ID INNER JOIN Attributes ON Attributes.AttributeID = CIAttributeMapping.AttributeID WHERE CIs.CI_ID = {id}";
+
+                SqlCommand cmd = new SqlCommand(commmandText, conn);
+                SqlDataReader reader;
+                using (reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        attributesToFind.Add(new CIAttributes((int)reader[0], (string)reader[1], (string)reader[2]));
+                    }
+                }
+                return attributesToFind;
+            }
+
+
         }
 
         public List<CIAttributes> GetAll()

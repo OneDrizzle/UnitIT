@@ -15,6 +15,19 @@ namespace UnitITICBM.Models
             TypeID = typeID;
             TypeName = typeName;
         }
+        public Type()
+        {
+
+        }
+
+        public void SetID(int id)
+        {
+            TypeID = id;
+        }
+        public void SetName(string name)
+        {
+            TypeName = name;
+        }
 
     }
 }
