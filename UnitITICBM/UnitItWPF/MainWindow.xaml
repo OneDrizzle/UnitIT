@@ -50,7 +50,8 @@
                              Foreground="white"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding CustomerViewCommand}"/>
+                             Command="{Binding CustomerViewCommand}" 
+                             />
 
                 <RadioButton Content="Network"
                              Height="50"

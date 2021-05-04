@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UnitItWPF.MVVM.View"
+              xmlns:viewModel="clr-namespace:UnitItWPF.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="460" d:DesignWidth="800">
     <StackPanel>
@@ -89,20 +90,6 @@
                         CornerRadius="10"
                         Margin="0"/>
 
-                <Border Width="150"
-                        Height="150"
-                        Background="#4e99ff"
-                        CornerRadius="10"/>
-
-                <Border Width="150"
-                        Height="150"
-                        Background="#4eff91"
-                        CornerRadius="10"/>
-
-                <Border Width="150"
-                        Height="150"
-                        Background="#ecff4e"
-                        CornerRadius="10"/>
             </StackPanel>
             
         </StackPanel>
