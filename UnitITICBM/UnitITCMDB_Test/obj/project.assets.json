@@ -6153,19 +6153,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\baske\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
       "projectName": "UnitITCMDB_Test",
-      "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
-      "packagesPath": "C:\\Users\\baske\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\obj\\",
+      "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\baske\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6177,10 +6177,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
-              "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj"
+            "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj"
             }
           }
         }
@@ -6193,7 +6192,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -6227,7 +6225,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
