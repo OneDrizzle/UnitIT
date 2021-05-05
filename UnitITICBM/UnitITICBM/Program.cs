@@ -11,12 +11,10 @@ namespace UnitITICBM
         {
             CIRepository cRepo = new CIRepository(new AttributeRepositoryDB(), new CustomerRepositoryDB(), new TypeRepositoryDB());
 
-            List<CI> testCI = cRepo.GetAll();
+            CI testCI = new CI("sadasd", cRepo.types.Get(1), cRepo.customers.Get(2), cRepo.attributes.GetAll());
 
-            foreach(CI x in testCI)
-            {
-                x.PrintAttrbutes();
-            }
+            cRepo.Add(testCI);
+           
 
             Console.ReadLine();
 
