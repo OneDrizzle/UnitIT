@@ -92,6 +92,21 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\Model\CI.cs" />
+    <Compile Include="MVVM\Model\CIAttributes.cs" />
+    <Compile Include="MVVM\Model\CIService.cs" />
+    <Compile Include="MVVM\Model\Customer.cs" />
+    <Compile Include="MVVM\Model\Employee.cs" />
+    <Compile Include="MVVM\Model\Enums.cs" />
+    <Compile Include="MVVM\Model\Type.cs" />
+    <Compile Include="MVVM\Persistance\AttributeRepositoryDB.cs" />
+    <Compile Include="MVVM\Persistance\CIRepository.cs" />
+    <Compile Include="MVVM\Persistance\CIServiceRepositoryDB.cs" />
+    <Compile Include="MVVM\Persistance\ConnectionString.cs" />
+    <Compile Include="MVVM\Persistance\CustomerRepositoryDB.cs" />
+    <Compile Include="MVVM\Persistance\EmployeeRepositoryDB.cs" />
+    <Compile Include="MVVM\Persistance\IRepo.cs" />
+    <Compile Include="MVVM\Persistance\TypeRepositoryDB.cs" />
     <Compile Include="MVVM\ViewModel\CustomerViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
@@ -139,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\man_PNG.png" />

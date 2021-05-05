@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnitITICBM.Persistance;
 using UnitItWPF.Core;
 
 namespace UnitItWPF.MVVM.ViewModel
@@ -18,6 +19,9 @@ namespace UnitItWPF.MVVM.ViewModel
         public CustomerViewModel CustomerVm { get; set; }
 
         private object _currentView;
+
+
+        CIRepository cRepo = new CIRepository(new AttributeRepositoryDB(), new CustomerRepositoryDB(), new TypeRepositoryDB());
 
         public object CurrentView
         {
