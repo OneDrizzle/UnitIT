@@ -21,9 +21,38 @@ namespace UnitITICBM.Persistance
             types = typeRepo;
         }
 
-        public void Add(CI item)
+        public void Add(CI ci)
         {
-            
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                string commandText = $"INSERT INTO dbo.CIs(CI_ID, CIName) VALUES ({ci.CI_ID}, {ci.CIName}";
+                SqlCommand cmd = new SqlCommand(commandText, conn);
+                cmd.Parameters.Add("@CI_ID", System.Data.SqlDbType.Int).Value = ci.CI_ID;
+                cmd.Parameters.Add("@CIName", System.Data.SqlDbType.NVarChar).Value = ci.CIName;
+
+
+                cmd.ExecuteNonQuery();
+                
+                
+            }
+        }
+        public int Add(string name, Models.Type type, Customer customer, List<CIAttributes> attributes)
+        {
+
+            CI newCI = new CI(name, type, customer, attributes);
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                int id = 0;
+                string commandText = $"INSERT INTO dbo.CIs(CIName) OUTPUT inserted.CI_ID VALUES {newCI.CIName}";
+                using (SqlCommand cmd = new SqlCommand(commandText, conn))
+                {
+                    id = cmd.ExecuteNonQuery();
+                }
+                return id;
+            };
+
         }
 
         public void Delete(int id)
@@ -108,6 +137,7 @@ namespace UnitITICBM.Persistance
             }
 
         }
+
 
         public void Refresh()
         {
