@@ -39,29 +39,14 @@ namespace UnitItWPF.MVVM.View
 
         private void Add_New_Customer_Button_Click(object sender, RoutedEventArgs e)
         {
-
-            SqlConnection conn = new SqlConnection("Server=10.56.8.35;Database=B_EKSDB01_2021;User Id=B_EKS01;Password=B_OPENDB01");
-
-                 conn.Open();
-                 SqlCommand cmd = new SqlCommand();
-                 cmd.CommandText = "INSERT INTO [CUSTOMERS] (CustomerName)values(@nm)";
-                 cmd.Parameters.AddWithValue("@nm", textbox_New_Customer.Text);
-                 cmd.Connection = conn;
-
-            int a = cmd.ExecuteNonQuery();
-            if (a == 1)
-            {
-                MessageBox.Show("Data Added!");
-                
-            }
-             
+            string name = textbox_New_Customer.Text;
+            mvm.cRepo.customers.Add(name);
         }
-
 
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-           IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.cRepo.customers.Get(1));
+            IEnumerable<UnitITICBM.Models.Customer> listToView = mvm.cRepo.customers.GetAll(); 
             
             Datagrid_Customers.ItemsSource = listToView;
 
