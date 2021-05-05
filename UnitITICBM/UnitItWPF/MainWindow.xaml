@@ -43,21 +43,23 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeViewCommand}"/>
+                             Command="{Binding HomeViewCommand}"
+                             />
 
                 <RadioButton Content="Customer"
                              Height="50"
                              Foreground="white"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding CustomerViewCommand}" 
+                             Command="{Binding CustomerViewCommand}"
                              />
 
                 <RadioButton Content="Network"
                              Height="50"
                              Foreground="white"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             />
             </StackPanel>
 
             <TextBox Width="250"

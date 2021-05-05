@@ -36,34 +36,25 @@ namespace UnitItWPF.MVVM.View
 
         }
 
-        private void add_New_Customer_Button_Click(object sender, RoutedEventArgs e)
+        private void Add_New_Customer_Button_Click(object sender, RoutedEventArgs e)
         {
 
-           /* SqlConnection conn = new SqlConnection("Server=10.56.8.35;Database=B_EKSDB01_2021;User Id=B_EKS01;Password=B_OPENDB01");
+            SqlConnection conn = new SqlConnection("Server=10.56.8.35;Database=B_EKSDB01_2021;User Id=B_EKS01;Password=B_OPENDB01");
 
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "INSERT * INTO [CUSTOMERS] (CustomerName)values(@nm)";
-                cmd.Parameters.AddWithValue("@nm", Datagrid_Customers.ItemsSource);
-                cmd.Connection = conn;
+                 conn.Open();
+                 SqlCommand cmd = new SqlCommand();
+                 cmd.CommandText = "INSERT INTO [CUSTOMERS] (CustomerName)values(@nm)";
+                 cmd.Parameters.AddWithValue("@nm", textbox_New_Customer.Text);
+                 cmd.Connection = conn;
 
-
-            
-                SqlConnection conn = new SqlConnection("Server=10.56.8.35;Database=B_EKSDB01_2021;User Id=B_EKS01;Password=B_OPENDB01");
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "INSERT INTO [CUSTOMERS] (CustomerName) VALUES (@nm))";
-                cmd.Parameters.AddWithValue("@nm", textbox_New_Customer.Text);
-                cmd.Connection = conn;
-
-                int a = cmd.ExecuteNonQuery();
-
-                if (a == 1)
-                {
-                    MessageBox.Show("Data added");
-
-                }*/
+            int a = cmd.ExecuteNonQuery();
+            if (a == 1)
+            {
+                MessageBox.Show("Data Added!");
+                
             }
+             
+        }
 
 
 
@@ -74,7 +65,7 @@ namespace UnitItWPF.MVVM.View
             try
             {
                 conn.Open();
-                string Query = "SELECT * FROM CUSTOMERS  ";
+                string Query = "SELECT * FROM Customers, Cis";
                 SqlCommand createCommand = new SqlCommand(Query, conn);
                 createCommand.ExecuteNonQuery();
 
@@ -90,20 +81,21 @@ namespace UnitItWPF.MVVM.View
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                 //MessageBox.Show(ex.Message);
             }
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
 
-        private void textbox_New_Customer_TextChanged(object sender, TextChangedEventArgs e)
+
+        private void Textbox_New_Customer_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-        }
 
+        }
     }
 }
     

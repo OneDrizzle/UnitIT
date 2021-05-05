@@ -31,17 +31,18 @@
 
 
             <DataGrid 
-                     x:Name="Datagrid_Customers"
-                     Grid.Column="1" 
-                     HorizontalAlignment="Left" 
-                     Height="355" 
-                     Margin="270,10,0,0" 
-                     Grid.Row="1" 
-                     VerticalAlignment="Top" 
-                     Width="320" 
-                     SelectionChanged="ListBox_SelectionChanged"
-                     AutoGenerateColumns="True"
-                   Binding.SourceUpdated="add_New_Customer_Button_Click"/> 
+                x:Name="Datagrid_Customers"
+                Background="Transparent"
+                Grid.Column="1" 
+                HorizontalAlignment="Left" 
+                Height="268" 
+                Margin="270,10,0,0" 
+                Grid.Row="1" 
+                VerticalAlignment="Top" 
+                Width="320" 
+                SelectionChanged="ListBox_SelectionChanged"
+                AutoGenerateColumns="True"
+                 />
 
 
             <StackPanel Grid.Row="1">
@@ -73,9 +74,10 @@
                      HorizontalAlignment="Left"
                      Margin="220,12,0,23"
                      Style="{StaticResource ModernTextbox}" Grid.Column="1"/>
+
             <TextBox x:Name="textbox_New_Customer" 
                 
-                Text=" "
+                Text="{Binding Datagrid_Customers, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="1" 
                 HorizontalAlignment="Left" 
                 Height="24" 
@@ -83,7 +85,7 @@
                 Grid.Row="1" 
                 TextWrapping="Wrap" 
                 VerticalAlignment="Top" 
-                Width="120" TextChanged="textbox_New_Customer_TextChanged"/>
+                Width="120" TextChanged="Textbox_New_Customer_TextChanged"/>
 
             <Label Content="New Customer : "
                    Foreground="White"
@@ -101,17 +103,7 @@
                     VerticalAlignment="Top" 
                     Width="70"
                     Height="20" 
-                    Click="add_New_Customer_Button_Click"/>
-            
-            <RadioButton x:Name="Load_All_Customers" 
-                      Content="Load"
-                      Foreground="Black"
-                      FontSize="14"
-                      Background="#FF1BCB53"  
-                      Style="{StaticResource MenuButtonTheme}"
-                      Command="{Binding CustomerViewCommand}" 
-                      Margin="157,25,339,316" 
-                      Checked="RadioButton_Checked_1" Grid.Column="1" IsChecked="True" ClickMode="Press" Grid.Row="1"/>
+                    Click="Add_New_Customer_Button_Click"/>
 
 
         </Grid>
