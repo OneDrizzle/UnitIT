@@ -21,7 +21,7 @@ namespace UnitItWPF.MVVM.ViewModel
         private object _currentView;
 
 
-        CIRepository cRepo = new CIRepository(new AttributeRepositoryDB(), new CustomerRepositoryDB(), new TypeRepositoryDB());
+        public CIRepository cRepo = new CIRepository(new AttributeRepositoryDB(), new CustomerRepositoryDB(), new TypeRepositoryDB());
 
         public object CurrentView
         {

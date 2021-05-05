@@ -10,24 +10,40 @@ namespace UnitITICBM.Models
         public Customer Customer { get; private set; }
         public string CIName { get;  set; }
 
-        public List<CIAttributes> Attributes { get; private set; }
+        public string Attributes
+        {
+            get
+            {
+                string result = "";
+
+                foreach (CIAttributes item in privAttributes)
+                {
+                    result = result + item.AttributeName +  " " + item.AttributeValue + "\n";
+                }
+                return result;
+            }
+        }
+
+        private List<CIAttributes> privAttributes;
 
         public CI(int cI_ID, Type type, Customer customer, List<CIAttributes> attributes)
         {
             CI_ID = cI_ID;
             @Type = type;
             Customer = customer;
-            Attributes = attributes;
+           //Attributes = attributes;
+            privAttributes = attributes;
         }
         public CI(string name, Type type, Customer customer, List<CIAttributes> attributes)
         {
             CIName = name;
             @Type = type;
             Customer = customer;
-            Attributes = attributes;
+            //Attributes = attributes;
+            privAttributes = attributes;
         }
 
-        public void PrintAttrbutes()
+        /*public void PrintAttrbutes()
         {
             foreach (CIAttributes a in Attributes)
             {
@@ -40,8 +56,8 @@ namespace UnitITICBM.Models
             System.Console.WriteLine("Komponent type " + @Type.TypeName);
             System.Console.WriteLine("");
             System.Console.WriteLine("Kunde " + Customer.CustomerName);
-
-        }
+        
+        }*/
         public CI()
         {
 
@@ -61,11 +77,12 @@ namespace UnitITICBM.Models
             CI_ID = id;
         }
 
-        public void SetAttributes(List<CIAttributes> attributes)
+        /*public void SetAttributes(List<CIAttributes> attributes)
         {
             Attributes = attributes;
-        }
+        }*/
 
+       
 
     }
 }

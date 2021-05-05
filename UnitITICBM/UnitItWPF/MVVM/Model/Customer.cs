@@ -29,5 +29,10 @@ namespace UnitITICBM.Models
         {
             CustomerName = name;
         }
+
+        public override string ToString()
+        {
+            return CustomerName;
+        }
     }
 }

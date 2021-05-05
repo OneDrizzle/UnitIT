@@ -29,5 +29,10 @@ namespace UnitITICBM.Models
             TypeName = name;
         }
 
+        public override string ToString()
+        {
+            return TypeName;
+        }
+
     }
 }

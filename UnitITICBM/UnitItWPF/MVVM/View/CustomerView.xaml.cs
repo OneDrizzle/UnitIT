@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using UnitItWPF.MVVM.ViewModel;
 
 namespace UnitItWPF.MVVM.View
 {
@@ -27,9 +27,10 @@ namespace UnitItWPF.MVVM.View
         public CustomerView()
         {
             InitializeComponent();
+            DataContext = mvm;
         }
 
-
+        MainViewModel mvm = new MainViewModel();
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
@@ -60,29 +61,10 @@ namespace UnitItWPF.MVVM.View
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Server=10.56.8.35;Database=B_EKSDB01_2021;User Id=B_EKS01;Password=B_OPENDB01");
+           IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.cRepo.customers.Get(1));
+            
+            Datagrid_Customers.ItemsSource = listToView;
 
-            try
-            {
-                conn.Open();
-                string Query = "SELECT * FROM Customers, Cis";
-                SqlCommand createCommand = new SqlCommand(Query, conn);
-                createCommand.ExecuteNonQuery();
-
-                SqlDataAdapter dataAdp = new SqlDataAdapter(createCommand);
-                DataTable dt = new DataTable("Customers");
-                dataAdp.Fill(dt);
-                Datagrid_Customers.ItemsSource = dt.DefaultView;
-                dataAdp.Update(dt);
-
-                conn.Close();
-            }
-
-
-            catch (Exception ex)
-            {
-                 //MessageBox.Show(ex.Message);
-            }
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
