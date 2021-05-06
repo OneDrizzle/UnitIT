@@ -79,6 +79,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
 
+
             </StackPanel>
             <TextBox Width="250"
                      VerticalContentAlignment="Center"
