@@ -9,8 +9,14 @@
              xmlns:viewModel="clr-namespace:UnitItWPF.MVVM.ViewModel">
 
 
-    <Border Background="#272537"
+    <Border
             CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#272537" Offset="0"/>
+                <GradientStop Color="#272537" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -49,15 +55,18 @@
 
             <StackPanel Grid.Row="1">
 
-                <RadioButton x:Name="Vis_Komponent_Button" Content="Vis Komponent"
+                <RadioButton x:Name="Vis_Komponent_Button" 
+                             Content="Vis Komponent"
                              Height="50"
                              Foreground="white"
+                             Background="Transparent"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeViewCommand}" Checked="Button_Showcomponent"/>
+                             Command="{Binding HomeViewCommand}" 
+                             Checked="Button_Showcomponent"/>
 
-                <RadioButton x:Name="Ændre_Komponent_Button" Content="Ændre Komponent"
+                <RadioButton x:Name="Ændre_Komponent_Button" Content="Udvid Kunde"
                              Height="50"
                              Foreground="white"
                              FontSize="14"
@@ -107,14 +116,14 @@
                     Height="20" 
                     Click="Add_New_Customer_Button_Click">
                 <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text.Length, ElementName=textbox_New_Customer, UpdateSourceTrigger=PropertyChanged}" Value="0">
-                            <Setter Property="IsEnabled" Value="False"/>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text.Length, ElementName=textbox_New_Customer, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                                <Setter Property="IsEnabled" Value="False"/>
 
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
                 </Button.Style>
             </Button>
 

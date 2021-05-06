@@ -1,20 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using UnitItWPF.MVVM.ViewModel;
 
 namespace UnitItWPF.MVVM.View
@@ -32,7 +18,7 @@ namespace UnitItWPF.MVVM.View
 
         MainViewModel mvm = new MainViewModel();
 
-        
+
 
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
@@ -51,13 +37,13 @@ namespace UnitItWPF.MVVM.View
         {
             IEnumerable<UnitITICBM.Models.Customer> listToView = mvm.cRepo.customers.GetAll();
             Datagrid_Customers.ItemsSource = listToView;
-            
-            
+
+
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+
         }
 
 
@@ -69,10 +55,22 @@ namespace UnitItWPF.MVVM.View
 
         private void Ændre_Komponent_Button_Checked(object sender, RoutedEventArgs e)
         {
-            IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.SelectedItem.CustomerID);
-            Datagrid_Customers.ItemsSource = listToView;
+            if (mvm.SelectedItem != null)
+            {
+                IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.SelectedItem.CustomerID);
+                Datagrid_Customers.ItemsSource = listToView;
+            }
+
+            else
+            {
+
+                MessageBox.Show("Kunde ikke valgt!");
+
+            }
         }
+
+
     }
 }
-    
+
 
