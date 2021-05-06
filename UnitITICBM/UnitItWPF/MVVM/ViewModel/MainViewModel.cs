@@ -24,7 +24,7 @@ namespace UnitItWPF.MVVM.ViewModel
                 selectedItem = value;
             }
         }
-
+        public IEnumerable<UnitITICBM.Models.CI> list { get;set; }
 
         private object _currentView;
 
@@ -61,11 +61,10 @@ namespace UnitItWPF.MVVM.ViewModel
 
         public IEnumerable<UnitITICBM.Models.CI> Update_Datagrid()
         {
-            IEnumerable<UnitITICBM.Models.CI> CIlistToView;
             if (selectedItem != null)
             {
-                CIlistToView = cRepo.GetAll(SelectedItem.CustomerID);
-                return CIlistToView;
+                list = cRepo.GetAll(SelectedItem.CustomerID);
+                return list;
             }
             else
             {

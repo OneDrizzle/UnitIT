@@ -51,7 +51,6 @@ namespace UnitItWPF.MVVM.View
         {
             IEnumerable<UnitITICBM.Models.Customer> listToView = mvm.cRepo.customers.GetAll();
             Datagrid_Customers.ItemsSource = listToView;
-            Datagrid_Customers.DataContext = mvm.Update_Datagrid();
             
             
         }
@@ -66,6 +65,12 @@ namespace UnitItWPF.MVVM.View
         {
 
 
+        }
+
+        private void Ændre_Komponent_Button_Checked(object sender, RoutedEventArgs e)
+        {
+            IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.SelectedItem.CustomerID);
+            Datagrid_Customers.ItemsSource = listToView;
         }
     }
 }

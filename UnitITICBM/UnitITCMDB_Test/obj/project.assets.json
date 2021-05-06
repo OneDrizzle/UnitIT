@@ -6153,19 +6153,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
       "projectName": "UnitITCMDB_Test",
-      "projectPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\obj\\",
+      "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6179,8 +6184,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
-              "projectPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj"
+            "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj"
             }
           }
         }

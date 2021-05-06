@@ -62,7 +62,7 @@
                              Foreground="white"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding CustomerViewCommand}"/>
+                             Command="{Binding CustomerViewCommand}" Checked="Ændre_Komponent_Button_Checked"/>
 
                 <RadioButton x:Name="Slet_Komponent_Button" Content="Slet komponent"
                              Height="50"
