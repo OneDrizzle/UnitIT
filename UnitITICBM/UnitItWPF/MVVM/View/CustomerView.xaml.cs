@@ -32,6 +32,9 @@ namespace UnitItWPF.MVVM.View
 
         MainViewModel mvm = new MainViewModel();
 
+        
+
+
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
 
@@ -44,12 +47,13 @@ namespace UnitItWPF.MVVM.View
         }
 
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void Button_Showcomponent(object sender, RoutedEventArgs e)
         {
-            IEnumerable<UnitITICBM.Models.Customer> listToView = mvm.cRepo.customers.GetAll(); 
-            
+            IEnumerable<UnitITICBM.Models.Customer> listToView = mvm.cRepo.customers.GetAll();
             Datagrid_Customers.ItemsSource = listToView;
-
+            Datagrid_Customers.DataContext = mvm.Update_Datagrid();
+            
+            
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

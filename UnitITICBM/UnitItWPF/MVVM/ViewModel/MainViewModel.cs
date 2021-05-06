@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using UnitITICBM.Persistance;
 using UnitItWPF.Core;
 
@@ -18,6 +14,18 @@ namespace UnitItWPF.MVVM.ViewModel
 
         public CustomerViewModel CustomerVm { get; set; }
 
+        private UnitITICBM.Models.Customer selectedItem;
+
+        public UnitITICBM.Models.Customer SelectedItem
+        {
+            get { return selectedItem; }
+            set
+            {
+                selectedItem = value;
+            }
+        }
+
+
         private object _currentView;
 
 
@@ -26,8 +34,8 @@ namespace UnitItWPF.MVVM.ViewModel
         public object CurrentView
         {
             get { return _currentView; }
-            set 
-            { 
+            set
+            {
                 _currentView = value;
                 OnPropertyChanged();
             }
@@ -50,5 +58,20 @@ namespace UnitItWPF.MVVM.ViewModel
                 CurrentView = CustomerVm;
             });
         }
+
+        public IEnumerable<UnitITICBM.Models.CI> Update_Datagrid()
+        {
+            IEnumerable<UnitITICBM.Models.CI> CIlistToView;
+            if (selectedItem != null)
+            {
+                CIlistToView = cRepo.GetAll(SelectedItem.CustomerID);
+                return CIlistToView;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
     }
 }

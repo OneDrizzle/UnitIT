@@ -111,14 +111,14 @@ namespace UnitITICBM.Persistance
             }
         }
 
-        public List<CI> GetAll(Customer customer)
+        public List<CI> GetAll(int ID)
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {
                 conn.Open();
                 List<int> clientCIs = new List<int>();
                 List<CI> listToFind = new List<CI>();
-                string commandText = $"SELECT CI_ID FROM CIs WHERE CustomerID = {customer.CustomerID}";
+                string commandText = $"SELECT CI_ID FROM CIs WHERE CustomerID = {ID}";
                 SqlCommand cmd = new SqlCommand(commandText, conn);
                 SqlDataReader reader;
                 using(reader = cmd.ExecuteReader())

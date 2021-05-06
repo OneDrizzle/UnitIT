@@ -42,18 +42,20 @@
                 Width="535" 
                 SelectionChanged="ListBox_SelectionChanged"
                 AutoGenerateColumns="True"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedItem}"
                  />
 
 
             <StackPanel Grid.Row="1">
 
-                <RadioButton x:Name="Ny_Komponent_Button" Content="Ny Komponent"
+                <RadioButton x:Name="Vis_Komponent_Button" Content="Vis Komponent"
                              Height="50"
                              Foreground="white"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeViewCommand}" Checked="RadioButton_Checked"/>
+                             Command="{Binding HomeViewCommand}" Checked="Button_Showcomponent"/>
 
                 <RadioButton x:Name="Ændre_Komponent_Button" Content="Ændre Komponent"
                              Height="50"
@@ -95,7 +97,7 @@
                    Grid.Row="1" 
                    VerticalAlignment="Top"/>
 
-            <Button x:Name="add_New_Customer_Button" Content="Add" 
+            <Button x:Name="add_New_Customer_Button" Content="Add"
                     Grid.Column="1" 
                     HorizontalAlignment="Left" 
                     Margin="182,36,0,0" 
@@ -103,7 +105,19 @@
                     VerticalAlignment="Top" 
                     Width="70"
                     Height="20" 
-                    Click="Add_New_Customer_Button_Click"/>
+                    Click="Add_New_Customer_Button_Click">
+                <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text.Length, ElementName=textbox_New_Customer, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                            <Setter Property="IsEnabled" Value="False"/>
+
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+                </Button.Style>
+            </Button>
+
 
 
         </Grid>
