@@ -69,7 +69,13 @@ namespace UnitItWPF.MVVM.View
             }
         }
 
+        private void Slet_Komponent_Button_Checked(object sender, RoutedEventArgs e)
+        {
 
+            mvm.cRepo.Delete(mvm.SelectedItem.CustomerID);
+            //IEnumerable<UnitITICBM.Persistance.CustomerRepositoryDB> CustomerToDelete = mvm.cRepo.Delete(ID = mvm.SelectedItem.CustomerID);
+            //Datagrid_Customers.SelectedItem = CustomerToDelete;
+        }
     }
 }
 

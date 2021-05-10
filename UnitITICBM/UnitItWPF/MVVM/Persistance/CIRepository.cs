@@ -57,7 +57,18 @@ namespace UnitITICBM.Persistance
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                string Cmtext = $"DELETE FROM CIs WHERE CustomerID = {id}";
+                string cmdText = $"DELETE FROM Customers WHERE CustomerID = {id}";
+                using (SqlCommand delRow = new SqlCommand(Cmtext, conn))
+                using (SqlCommand deleteRow = new SqlCommand(cmdText, conn)) 
+                {
+                    delRow.ExecuteNonQuery();
+                    deleteRow.ExecuteNonQuery();
+                }
+            }
         }
 
         public CI GetFromCI(int id)
@@ -111,7 +122,7 @@ namespace UnitITICBM.Persistance
             }
         }
 
-        public List<CI> GetAll(int ID)
+        public List<CI>GetAll(int ID)
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using System.Windows;
 using UnitITICBM.Models;
-using UnitItWPF.MVVM.View;
 
 namespace UnitITICBM.Persistance
 {
@@ -35,8 +33,9 @@ namespace UnitITICBM.Persistance
             }
         }
 
-        public void Delete(int id)
+        public void Delete(int ID)
         {
+            
             throw new NotImplementedException();
         }
 
@@ -81,7 +80,7 @@ namespace UnitITICBM.Persistance
             }
 
         }
-        
+
         public void Refresh()
         {
             throw new NotImplementedException();
