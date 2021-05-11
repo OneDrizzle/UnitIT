@@ -67,3 +67,5 @@ C:\Users\andre\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\
 C:\Users\andre\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\UnitItWPF.csproj.CoreCompileInputs.cache
 C:\Users\andre\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\UnitItWPF.exe
 C:\Users\andre\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\UnitItWPF.pdb
+C:\Users\baske\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\MVVM\View\ComponentView.g.cs
+C:\Users\baske\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\MVVM\View\ComponentView.baml

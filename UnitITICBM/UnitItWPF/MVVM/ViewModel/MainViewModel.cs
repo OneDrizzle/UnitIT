@@ -10,9 +10,13 @@ namespace UnitItWPF.MVVM.ViewModel
 
         public RelayCommand CustomerViewCommand { get; set; }
 
+        public RelayCommand ComponentViewCommand { get; set; }
+
         public HomeViewModel HomeVm { get; set; }
 
         public CustomerViewModel CustomerVm { get; set; }
+
+        public ComponentViewModel ComponentVm { get; set;}
 
         private UnitITICBM.Models.Customer selectedItem;
 
@@ -24,6 +28,7 @@ namespace UnitItWPF.MVVM.ViewModel
                 selectedItem = value;
             }
         }
+
         public IEnumerable<UnitITICBM.Models.CI> list { get;set; }
 
         private object _currentView;
@@ -45,6 +50,7 @@ namespace UnitItWPF.MVVM.ViewModel
         {
             HomeVm = new HomeViewModel();
             CustomerVm = new CustomerViewModel();
+            ComponentVm = new ComponentViewModel();
 
             CurrentView = HomeVm;
 
@@ -57,6 +63,13 @@ namespace UnitItWPF.MVVM.ViewModel
             {
                 CurrentView = CustomerVm;
             });
+
+            ComponentViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = ComponentVm;
+            });
+
+            
         }
 
         public IEnumerable<UnitITICBM.Models.CI> Update_Datagrid()

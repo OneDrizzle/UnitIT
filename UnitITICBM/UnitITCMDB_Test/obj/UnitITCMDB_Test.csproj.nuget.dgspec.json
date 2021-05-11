@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj": {}
+    "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj": {
+    "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
+        "projectUniqueName": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
         "projectName": "UnitITCMDB_Test",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\obj\\",
+        "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\UnitITCMDB_Test.csproj",
+        "packagesPath": "C:\\Users\\baske\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITCMDB_Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baske\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
-                "projectPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj"
+              "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
+                "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj"
               }
             }
           }
@@ -80,17 +80,17 @@
         }
       }
     },
-    "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
+    "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
+        "projectUniqueName": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
         "projectName": "UnitITICBM",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\obj\\",
+        "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
+        "packagesPath": "C:\\Users\\baske\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baske\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

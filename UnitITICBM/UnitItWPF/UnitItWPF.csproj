@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -74,6 +75,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\ComponentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MVVM\View\CustomerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,9 +112,13 @@
     <Compile Include="MVVM\Persistance\EmployeeRepositoryDB.cs" />
     <Compile Include="MVVM\Persistance\IRepo.cs" />
     <Compile Include="MVVM\Persistance\TypeRepositoryDB.cs" />
+    <Compile Include="MVVM\ViewModel\ComponentViewModel.cs" />
     <Compile Include="MVVM\ViewModel\CustomerViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\View\ComponentView.cs">
+      <DependentUpon>ComponentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\CustomerView.xaml.cs">
       <DependentUpon>CustomerView.xaml</DependentUpon>
     </Compile>

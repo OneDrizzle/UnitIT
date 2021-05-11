@@ -53,28 +53,16 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              />
-                <RadioButton Content="New Component"
+                
+                <RadioButton Content="Component"
                     Height="50"
                     Foreground="white"
                     FontSize="14"
                     Style="{StaticResource MenuButtonTheme}"
-                    Command="{Binding CustomerViewCommand}"
+                    Command="{Binding ComponentViewCommand}"
                              />
-
-                <RadioButton Content="Edit Component"
-                    Height="50"
-                    Foreground="white"
-                    FontSize="14"
-                    Style="{StaticResource MenuButtonTheme}"
-                    Command="{Binding CustomerViewCommand}"
-                             />
-                <RadioButton Content="Delete Component"
-                    Height="50"
-                    Foreground="white"
-                    FontSize="14"
-                    Style="{StaticResource MenuButtonTheme}"
-                    Command="{Binding CustomerViewCommand}"
-                             />
+              
+            
             </StackPanel>
 
             <TextBox Width="250"
