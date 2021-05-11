@@ -454,19 +454,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\baske\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
       "projectName": "UnitITICBM",
-      "projectPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
-      "packagesPath": "C:\\Users\\baske\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baske\\OneDrive\\Dokumenter\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\obj\\",
+      "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\UnitITICBM.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\UnitIT\\UnitITICBM\\UnitITICBM\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\baske\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

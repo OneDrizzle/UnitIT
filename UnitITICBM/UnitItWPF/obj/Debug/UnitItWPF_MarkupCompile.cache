@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\baske\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\
+C:\Users\Daniel\Documents\GitHub\UnitIT\UnitITICBM\UnitItWPF\obj\Debug\
 UnitItWPF
 none
 false
 DEBUG;TRACE
-C:\Users\baske\OneDrive\Dokumenter\GitHub\UnitIT\UnitITICBM\UnitItWPF\App.xaml
+C:\Users\Daniel\Documents\GitHub\UnitIT\UnitITICBM\UnitItWPF\App.xaml
 6-1760813944
 
-301488590260
+31646230893
 141111353196
 MainWindow.xaml;MVVM\View\ComponentView.xaml;MVVM\View\CustomerView.xaml;MVVM\View\HomeView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
-False
+True
 

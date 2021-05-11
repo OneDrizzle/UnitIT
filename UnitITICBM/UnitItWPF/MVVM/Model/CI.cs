@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using UnitItWPF.MVVM.Model;
 
 namespace UnitITICBM.Models
 {
-    public class CI
+    public class CI : SelectableItem
     {
 
         public int CI_ID { get; private set; }

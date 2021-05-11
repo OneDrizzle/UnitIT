@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnitITICBM.Persistance;
 using UnitItWPF.Core;
+using UnitItWPF.MVVM.Model;
 
 namespace UnitItWPF.MVVM.ViewModel
 {
@@ -18,11 +19,21 @@ namespace UnitItWPF.MVVM.ViewModel
 
         public ComponentViewModel ComponentVm { get; set;}
 
-        private UnitITICBM.Models.Customer selectedItem;
+        private SelectableItem selectedItem;
 
-        public UnitITICBM.Models.Customer SelectedItem
+        public SelectableItem SelectedItem
         {
-            get { return selectedItem; }
+            get { if (selectedItem is UnitITICBM.Models.Customer c)
+                {
+                    return selectedItem as UnitITICBM.Models.Customer;
+                }
+                else if (selectedItem is UnitITICBM.Models.CI a)
+                {
+                    return selectedItem as UnitITICBM.Models.CI;
+                }
+                else
+                    return null;
+            }
             set
             {
                 selectedItem = value;
