@@ -103,6 +103,7 @@
     <Compile Include="MVVM\Model\Customer.cs" />
     <Compile Include="MVVM\Model\Employee.cs" />
     <Compile Include="MVVM\Model\Enums.cs" />
+    <Compile Include="MVVM\Model\SelectableItem.cs" />
     <Compile Include="MVVM\Model\Type.cs" />
     <Compile Include="MVVM\Persistance\AttributeRepositoryDB.cs" />
     <Compile Include="MVVM\Persistance\CIRepository.cs" />
