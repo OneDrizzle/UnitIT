@@ -45,14 +45,22 @@ namespace UnitITICBM.Persistance
             {
                 conn.Open();
                 Customer customerToFind = new Customer();
-                string commandText = $"SELECT Customers.CustomerName FROM Customers WHERE CustomerID = {id}";
+                string commandText = $"SELECT CIs.CustomerID FROM CIs WHERE CI_ID = {id}";
                 SqlCommand cmd = new SqlCommand(commandText, conn);
                 SqlDataReader reader;
                 using (reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        customerToFind.SetID(id);
+                        customerToFind.SetID((int)reader[0]);
+                    }
+                }
+                commandText = $"SELECT Customers.CustomerName FROM Customers WHERE CustomerID = {customerToFind.CustomerID}";
+                cmd = new SqlCommand(commandText, conn);
+                using (reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
                         customerToFind.SetName((string)reader[0]);
                     }
                 }

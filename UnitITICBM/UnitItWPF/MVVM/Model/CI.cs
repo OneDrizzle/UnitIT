@@ -7,7 +7,7 @@ namespace UnitITICBM.Models
     {
 
         public int CI_ID { get; private set; }
-        public Type @Type { get; private set; }
+        public Type CIType { get; private set; }
         public Customer Customer { get; private set; }
         public string CIName { get;  set; }
 
@@ -27,20 +27,19 @@ namespace UnitITICBM.Models
 
         private List<CIAttributes> privAttributes;
 
-        public CI(int cI_ID, Type type, Customer customer, List<CIAttributes> attributes)
+        public CI(int cI_ID, string ciName, Type type, Customer customer, List<CIAttributes> attributes)
         {
             CI_ID = cI_ID;
-            @Type = type;
+            CIName = ciName;
+            CIType = type;
             Customer = customer;
-           //Attributes = attributes;
             privAttributes = attributes;
         }
         public CI(string name, Type type, Customer customer, List<CIAttributes> attributes)
         {
             CIName = name;
-            @Type = type;
+            CIType = type;
             Customer = customer;
-            //Attributes = attributes;
             privAttributes = attributes;
         }
 
@@ -66,7 +65,7 @@ namespace UnitITICBM.Models
 
         public void SetType(Type type)
         {
-            this.Type = type;
+            CIType = type;
         }
 
         public void SetCustomer(Customer customer)

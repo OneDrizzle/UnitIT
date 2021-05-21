@@ -71,9 +71,30 @@ namespace UnitITICBM.Persistance
             }
         }
 
+        public string GetName(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                string nameToFind = "";
+                string commandText = $"SELECT CIs.CIName FROM CIs WHERE CI_ID = {id}";
+                SqlCommand cmd = new SqlCommand(commandText, conn);
+                SqlDataReader reader;
+                using (reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        nameToFind = (string)reader[0];
+                    }
+                }
+                return nameToFind;
+            }
+        }
+
         public CI GetFromCI(int id)
         {
-            return new CI(id, types.Get(id), customers.Get(id), attributes.GetAll(id));
+            CI CIreturn = new CI(id, GetName(id), types.Get(id), customers.Get(id), attributes.GetAll(id));
+            return CIreturn;
         }
 
         public CI GetFromCustomer(Customer customer)

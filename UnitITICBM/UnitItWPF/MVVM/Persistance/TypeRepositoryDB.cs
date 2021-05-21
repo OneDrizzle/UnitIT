@@ -30,14 +30,22 @@ namespace UnitITICBM.Persistance
             {
                 conn.Open();
                 Models.Type typeToFind = new Models.Type();
-                string commandText = $"SELECT CITypes.TypeName FROM CITypes WHERE TypeID = {id}";
+                string commandText = $"SELECT CIs.TypeID FROM CIs WHERE CI_ID = {id}";
                 SqlCommand cmd = new SqlCommand(commandText, conn);
                 SqlDataReader reader;
                 using (reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        typeToFind.SetID(id);
+                        typeToFind.SetID((int)reader[0]);
+                    }
+                }
+                commandText = $"SELECT CITypes.TypeName FROM CITypes WHERE CITypes.TypeID = {typeToFind.TypeID}";
+                cmd = new SqlCommand(commandText, conn);
+                using (reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
                         typeToFind.SetName((string)reader[0]);
                     }
                 }
