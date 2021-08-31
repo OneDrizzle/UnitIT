@@ -55,9 +55,9 @@ namespace UnitItWPF.MVVM.View
 
         private void Ændre_Komponent_Button_Checked(object sender, RoutedEventArgs e)
         {
-            if (mvm.SelectedItem != null)
+            if (mvm.SelectedItem != null && mvm.SelectedItem is UnitITICBM.Models.Customer c)
             {
-                IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.SelectedItem.CustomerID);
+                IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(c.CustomerID);
                 Datagrid_Customers.ItemsSource = listToView;
             }
 
@@ -71,8 +71,10 @@ namespace UnitItWPF.MVVM.View
 
         private void Slet_Komponent_Button_Checked(object sender, RoutedEventArgs e)
         {
-
-            mvm.cRepo.Delete(mvm.SelectedItem.CustomerID);
+            if(mvm.SelectedItem != null && mvm.SelectedItem is UnitITICBM.Models.CI c)
+            {
+                mvm.cRepo.Delete(c.Customer.CustomerID);
+            }
             //IEnumerable<UnitITICBM.Persistance.CustomerRepositoryDB> CustomerToDelete = mvm.cRepo.Delete(ID = mvm.SelectedItem.CustomerID);
             //Datagrid_Customers.SelectedItem = CustomerToDelete;
         }

@@ -85,9 +85,9 @@ namespace UnitItWPF.MVVM.ViewModel
 
         public IEnumerable<UnitITICBM.Models.CI> Update_Datagrid()
         {
-            if (selectedItem != null)
+            if (selectedItem != null && selectedItem is UnitITICBM.Models.Customer c)
             {
-                list = cRepo.GetAll(SelectedItem.CustomerID);
+                list = cRepo.GetAll(c.CustomerID);
                 return list;
             }
             else

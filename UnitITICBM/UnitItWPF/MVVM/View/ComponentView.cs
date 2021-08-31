@@ -29,9 +29,9 @@ namespace UnitItWPF.MVVM.View
 
         private void Ændre_Komponent_Button_Checked(object sender, RoutedEventArgs e)
         {
-            if (mvm.SelectedItem != null)
+            if (mvm.SelectedItem != null && mvm.SelectedItem is UnitITICBM.Models.CI c)
             {
-                IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(mvm.SelectedItem.CustomerID);
+                IEnumerable<UnitITICBM.Models.CI> listToView = mvm.cRepo.GetAll(c.Customer.CustomerID);
                 Datagrid_Component.ItemsSource = listToView;
             }
 
